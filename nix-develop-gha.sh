@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+set -x
+
 # Read the arguments into an array, so they can be added correctly as flags
 IFS=" " read -r -a arguments <<<"${@:-./#default}"
 
