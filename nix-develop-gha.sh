@@ -33,7 +33,7 @@ while IFS='=' read -r -d '' n v; do
 			echo "Environment variable $n contains randomly generated string $delimiter, file an issue and buy a lottery ticket."
 			exit 1
 		fi
-		printf "%s<<%s\n%s%s\n" "$n" "$delimiter" "$v" "$delimiter" >>"${GITHUB_ENV:-/dev/stderr}"
+		printf "%s<<%s\n%s\n%s\n" "$n" "$delimiter" "$v" "$delimiter" >>"${GITHUB_ENV:-/dev/stderr}"
 		continue
 	fi
 	printf "%s=%s\n" "$n" "$v" >>"${GITHUB_ENV:-/dev/stderr}"
